@@ -10,18 +10,18 @@ import java.io.PrintWriter;
  * @author Lopez
  */
 public class clsConexion {
-    
+    Connection con = null;
     public Connection Conexion()
     {
-        Connection con = null;
+ 
         try{
-            Class.forName("com.mysql.jdbc,driver");
+            Class.forName("com.mysql.jdbc.Driver");
             String db = "test";
             String usuario = "root";
             String Pass = "root";
             String server = "jdbc:mysql://localhost/" + db ;
             con = DriverManager.getConnection(server, usuario, Pass);
-        
+       
         }
         catch(Exception e)
         {
